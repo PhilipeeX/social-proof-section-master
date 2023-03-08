@@ -34,16 +34,17 @@ body {
 }
 .imagem-superior {
     position: absolute;
-    width: 100%;
-    left: 0%;
-    top: 0%;
+    max-width: 100%;
+    top: 0;
+    left: 0;
 }
 .imagem-inferior {
-    position: absolute;
-    top: 150vh;
-    width: 100%;
+    position:fixed;
+    max-width: 100%;
+    bottom: 0;
+    right: 0;
 }
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 980px){
     main {
         width: 100%;
         display: flex;
@@ -51,6 +52,7 @@ body {
         top: 15%;
         position: absolute;
         max-width: 350px;
+        padding-bottom: 15%;
     }
     .texto-avaliacao {
         display: flex;
@@ -58,7 +60,7 @@ body {
         align-items: center;
         text-align: center;
     }
-    .texto-avaliacao h1 {
+    .texto-avaliacao-principal h1 {
         font-size: 32px;
         font-weight: 700;
         color: var(--Very-Dark-Magenta);
@@ -67,7 +69,7 @@ body {
         line-height: 2rem;
         margin-bottom: 1.5rem;
     }
-    .texto-avaliacao p {
+    .texto-avaliacao-principal p {
         color: var(--Dark-Grayish-Magenta);
         padding: 0 1.5rem;
         line-height: 1.5rem;
@@ -135,6 +137,95 @@ body {
     .card>p {
         color: var(--White);
         line-height: 1.4rem;
+    }
+}
+@media only screen and (min-width: 981px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        min-width: 1080px;
+        max-width: 1440px;
+        padding: 10%;
+    }
+    .texto-avaliacao {
+        display: flex;
+        padding: 1rem;
+    }
+    .texto-avaliacao-principal {
+        display: flex;
+        flex-direction: column;
+        padding-right: 4rem;
+        width: 50%;
+        gap: 1rem;
+    }
+    .texto-avaliacao-principal h1 {
+        color: var(--Very-Dark-Magenta);
+        font-size: 52px;
+        line-height: 2.5rem;
+    }
+    .texto-avaliacao-principal p {
+        color: var(--Dark-Grayish-Magenta);
+        line-height: 1rem;
+        font-weight: 500;
+    }
+    .avaliacoes {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .avaliacao {
+        background-color: var(--Light-Grayish-Magenta);
+        display: flex;
+        padding: 1rem;
+        border-radius: .5rem;
+        width: 350px;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+    .report {
+        margin-left: 2rem;
+    }
+    .best-tech {
+        margin-left: 4rem;
+    }
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        gap: .5rem;
+    }
+    .card {
+        background-color: var(--Very-Dark-Magenta);
+        border-radius: .5rem;
+        padding: 2rem 1.5rem;
+        flex-basis: 300px;
+        height: 220px;
+    }
+    .foto-nome {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .foto-nome img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .nome {
+        color: var(--White);
+    }
+    .status {
+        color: var(--Soft-Pink)
+    }
+    .irene {
+        margin-top: 3rem;
+    }
+    .anne {
+        margin-top: 6rem;
+    }
+    .card>p {
+        color: var(--White);
+        line-height: 1.2rem;
     }
 }
 /* .attribution {
